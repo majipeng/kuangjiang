@@ -1,0 +1,60 @@
+body .economics-tip i.layui-layer-TipsB, i.layui-layer-TipsT {
+    left: 12px;
+    border-right-style: solid;
+    border-right-color: #ffffff;
+    transform: rotate(90deg);
+}
+body .economics-tip i.layui-layer-TipsB {
+    top: -14px;
+}
+body .economics-tip .layui-layer-content{
+    background: #ffffff;
+    color: #666666;
+    padding:15px;
+}
+body .economics-tip .layui-layer-content .box{
+    width:54px;
+    height:50px;
+    background:rgba(230,236,242,1);
+    margin-right: 6px;
+}
+
+body .economics-tip .layui-layer-content .fraction-box{
+    margin-top: 6px;
+}
+
+body .economics-tip .layui-layer-content .fraction-box .box:last-child{
+    margin-right: 0;
+}
+body .economics-tip .layui-layer-content .box:last-child{
+    margin-right: 0;
+}
+
+body .economics-tip .layui-layer-content .company{
+    font-size:14px;
+    font-weight:400;
+    color:#666666;
+}
+body .economics-tip .layui-layer-content .user{
+    font-size:14px;
+    font-weight:400;
+    color:#666666;
+    margin-top: 2px;
+}
+body .economics-tip .layui-layer-content .box .title{
+    text-align: center;
+    height: 14px;
+    font-size: 11px;
+    font-weight: 400;
+    /*padding: 4px 11px;*/
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+body .economics-tip .layui-layer-content .box .fraction{
+    text-align: center;
+    font-size:11px;
+    font-weight:bold;
+    color:#EE9407;
+    margin-top: 4%;
+}

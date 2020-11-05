@@ -1,0 +1,84 @@
+* {
+    margin: 12px;padding: 0px;font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.layui-table {
+    margin: 5px 0;
+    width: 100%;
+    background-color: #fff;
+    color: #666;
+}
+
+.layui-table thead{
+border-style:none;
+}
+
+.layui-table td, .layui-table th {
+    position: relative;
+    padding: 3px 4px;
+    min-height: 20px;
+    line-height: 20px;
+    font-size: xx-small;
+}
+.layui-table th {
+    text-align: left;
+    font-weight: 400;
+}
+.layui-table td, .layui-table th, .layui-table-col-set, .layui-table-fixed-r, .layui-table-grid-down, .layui-table-header, .layui-table-page, .layui-table-tips-main, .layui-table-tool, .layui-table-total, .layui-table-view, .layui-table[lay-skin=line], .layui-table[lay-skin=row] {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e6e6e6;
+}
+table {
+    display: table;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-color: grey;
+    page-break-after: always;
+}
+
+table th, table td {
+    word-break: break-all;
+
+}
+
+th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+td {
+    display: table-cell;
+    vertical-align: inherit;
+}
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+tfoot {
+    display: table-footer-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+.print-foot{
+    border-collapse: collapse;
+}
+
+.print-head{
+    display:table-row;
+}

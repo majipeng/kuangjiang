@@ -1,0 +1,294 @@
+<!-- 左侧菜单开始 -->
+<style type="text/css">
+	.top_nav {
+        position: absolute;
+        left: 0;
+        top: 46px;
+        z-index: 777;
+        background: #fff;
+        border: 1px solid #EE9407;
+        border-bottom: 2px solid #EE9407;
+        display: none;
+	}
+    .top_nav dl {
+        max-height: 450px;
+        overflow-y: auto;
+    }
+    .top_nav dl::-webkit-scrollbar {
+        /*滚动条整体样式*/
+        width : 30px;  /*高宽分别对应横竖滚动条的尺寸*/
+        height: 8px;
+    }
+    .top_nav dl::-webkit-scrollbar-thumb {
+        /*滚动条里面小方块*/
+        border-radius  : 16px;
+        border: 11px solid rgba(0, 0, 0, 0);
+        box-shadow: 15px 0 0 #d8d8d8 inset;
+    }
+    .top_nav dl::-webkit-scrollbar-track {
+        /*滚动条里面轨道*/
+        border-radius  : 16px;
+        border: 11px solid rgba(0, 0, 0, 0);
+        box-shadow: 15px 0 0 #ECECEC inset;
+    }
+	.top_nav dl dd {
+		height: 30px;
+		position: relative;
+	}
+
+	.top_nav dl dd .nav_right {
+		position: absolute;
+		left: 333px;
+		top: 0px;
+		width: 100%;
+		background: #fff;
+		display: none;
+		border: 1px solid #78A8F0;
+		padding: 4px 10px;
+	}
+
+	.top_nav dl dd .nav_right a {
+		height: 26px;
+		line-height: 26px;
+		text-align: left;
+		color: #666;
+		display: block;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		-o-text-overflow: ellipsis;
+		overflow: hidden;
+	}
+
+	.top_nav dl dd .nav_right div {
+		height: 26px;
+		line-height: 26px;
+		text-align: left;
+		color: #666;
+		display: block;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		-o-text-overflow: ellipsis;
+		overflow: hidden;
+	}
+
+
+	.top_nav dl dd .nav_right a:hover {
+		line-height: 26px;
+		text-align: left;
+		color: #78A8F0;
+		text-decoration: none;
+	}
+
+	.top_nav dl dd .nav_right div:hover {
+		line-height: 26px;
+		text-align: left;
+		color: #78A8F0;
+		text-decoration: none;
+	}
+
+
+	.top_nav dl dd .nav_left {
+		width: 320px;
+		height: 30px;
+		line-height: 30px;
+		padding-left: 13px;
+		display: block;
+		border-bottom: 1px solid #fff;
+		color: #3C4347;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		-o-text-overflow: ellipsis;
+		overflow: hidden;
+	}
+
+	.top_nav dl dd .nav_left:hover {
+		color: #78A8F0;
+		text-decoration: none;
+	}
+
+	.top_nav dl dd:hover {
+		background-color: #E3EAF6;
+		color: #78A8F0;
+	}
+	.top_nav dl dd:hover .nav_left{
+		color: #78A8F0;
+	}
+	.change {
+		display: inline-block;
+		vertical-align: bottom;
+		cursor: pointer;
+		position: relative;
+	}
+	.retutnHome,
+	.changetext {
+		font-size: 16px !important;
+		color: #333333;
+	}
+
+	.changetext span {
+		margin-left: 8px;
+	}
+
+	.x-nav {
+		overflow: inherit;
+	}
+
+	.showCompany {
+		display: inline-flex;
+		font-size: 16px;
+		vertical-align: middle;
+		align-items: center;
+		margin-left: 10px;
+	}
+	.linerow{
+		margin: 0 4px;
+	}
+    .layui-nav-item a:hover .layui-nav-more {
+        border-top-color: #EE9407;
+    }
+    .layui-nav .layui-nav-item a:hover, .layui-nav .layui-this a {
+        color: #EE9407;
+    }
+
+    .layui-nav .layui-nav-more {
+        border-top-color: #333333;
+    }
+    .layui-nav-bar {
+        background-color: #EE9407;
+    }
+</style>
+<div class="left-nav">
+	<div class="logo">
+		<a href="javascript:;" onclick="home()">
+			<img src="__PUBLIC__/images/logo.png" >
+		</a>
+	</div>
+	<div class="line-w"></div>
+	<div id="side-nav">
+		<ul id="nav">
+            <!-- 菜单一 -->
+            <li>
+                <a href="javascript:;">
+                    <i class="iconfont left-nav-li" lay-tips="权限管理">&#xe6b4;</i>
+                    <cite>权限管理</cite>
+                    <i class="iconfont nav_right">&#xe697;</i></a>
+                <ul class="sub-menu">
+                    <li>
+                        <a onclick="xadmin.add_tab('权限规则','Admin/auth/index')">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>权限规则</cite></a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="iconfont left-nav-li" lay-tips="用户管理">&#xe6b4;</i>
+                    <cite>用户管理</cite>
+                    <i class="iconfont nav_right">&#xe697;</i></a>
+                <ul class="sub-menu">
+                    <li>
+                        <a onclick="xadmin.add_tab('用户管理','Admin/admin/user')">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>用户管理</cite></a>
+                    </li>
+                </ul>
+            </li>
+		</ul>
+	</div>
+</div>
+<!-- <div class="x-slide_left"></div> -->
+<!-- 左侧菜单结束 -->
+<!-- 右侧主体开始 -->
+<div class="page-content">
+	<div class="layui-tab tab" lay-filter="xbs_tab" lay-allowclose="false">
+		<ul class="layui-tab-title" hidden="hidden">
+			<li class="home">
+				<i class="layui-icon">&#xe68e;</i>我的桌面</li>
+		</ul>
+
+		<div class="layui-unselect layui-form-select layui-form-selected" id="tab_right">
+			<dl>
+				<dd data-type="this">关闭当前</dd>
+				<dd data-type="other">关闭其它</dd>
+				<dd data-type="all">关闭全部</dd>
+			</dl>
+		</div>
+		<div class="x-nav">
+			<div class="v-line"></div>
+			<!-- 		    <span class="layui-breadcrumb">
+		        <a href="javascript:;" onclick="home()">首页</a>
+		        <a href="javascript:;" class="second"></a>
+		        <a href="javascript:;"><cite class="three"></cite></a>
+		    </span> -->
+			<div class="showCompany">
+				<div></div>
+			</div>
+            
+		</div>
+		<ul class="layui-nav right" lay-filter="">
+			<li class="layui-nav-item">
+				<a class="retutnHome" href="javascript:;"  >{$username}</a>
+				<dl class="layui-nav-child">
+					<!-- 二级菜单 -->
+					<!-- <dd>
+						<a onclick="xadmin.open('修改密码','mima',600,400)" href="javascript:;">修改密码</a></dd> -->
+					<dd>
+						<a href="{:url('login/login')}" onclick="xadmin.close_all();">退出</a></dd>
+				</dl>
+			</li>
+			<li class="layui-nav-item to-index">
+				<!-- <a href="/">前台首页</a> -->
+			</li>
+		</ul>
+		<div class="layui-tab-content">
+			<div class="layui-tab-item layui-show">
+				<iframe src='{:url("admin/welcome")}'  frameborder="0" scrolling="yes" class="x-iframe"></iframe>
+			</div>
+		</div>
+        
+		<div id="tab_show"></div>
+	</div>
+</div>
+<div class="page-content-bg"></div>
+<style id="theme_style"></style>
+<!-- 右侧主体结束-->
+
+<script>
+	$(function() {
+		xadmin.close_all();
+	});
+	$(".sub-menu").find("li").on("click", function() {
+		var second = $(this).parents('.sub-menu').siblings('a').find('cite').text();
+		var three = $(this).find("cite").text();
+		$('.second').text(second);
+		$('.three').text(three)
+	});
+
+	function home() {
+		xadmin.close_all();
+        window.location.reload();
+	}
+	$(function() {
+		$(".change").on('click', function() {
+			event.stopPropagation(); 
+			$(".top_nav", this).toggle();
+		});
+		$('top_nav .nav_right a').on('click', function() {
+			event.stopPropagation(); 
+			$('body').find('.top_nav').hide();
+		})
+		$(".top_nav dd").hover(function() {
+			$(".nav_right", this).show();
+		});
+		$(".top_nav dd").mouseleave(function() {
+			$(".nav_right", this).hide();
+		});
+		 $(document).click(function(event){
+		        var _con = $('.top_nav');  // 设置目标区域
+		        if(!_con.is(event.target) && _con.has(event.target).length === 0){ // Mark 1
+		           $('.top_nav').hide();     //淡出消失
+		        }
+		   });
+
+	});
+</script>
